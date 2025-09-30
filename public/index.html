@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <title>Co-Meeting Time | 创建事件</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link href="/styles.css" rel="stylesheet" />
+</head>
+<body>
+  <main class="page">
+    <section class="hero">
+      <h1>Co-Meeting Time</h1>
+      <p>快速创建事件链接，让所有人协同标记有空的时间。</p>
+    </section>
+    <section class="card">
+      <h2>新建事件</h2>
+      <form id="create-form" class="form">
+        <label>
+          事件名称
+          <input id="event-title" name="title" type="text" placeholder="例如：每周项目例会" maxlength="100" />
+        </label>
+        <button type="submit">创建事件链接</button>
+      </form>
+      <div id="create-result" class="result" hidden></div>
+    </section>
+    <section class="card">
+      <h3>如何使用？</h3>
+      <ol>
+        <li>创建事件，并复制生成的链接。</li>
+        <li>发送给参与者，让每个人标记自己的可用时间。</li>
+        <li>右侧热力时间表实时显示最多人有空的时段。</li>
+      </ol>
+    </section>
+  </main>
+  <script defer src="/js/index.js"></script>
+</body>
+</html>

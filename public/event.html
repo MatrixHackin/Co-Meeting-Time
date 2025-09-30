@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <title>Co-Meeting Time | 协调时间</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link href="/styles.css" rel="stylesheet" />
+</head>
+<body>
+  <main class="page">
+    <header class="event-header">
+      <div>
+        <h1 id="event-title">加载中...</h1>
+        <p id="event-meta"></p>
+      </div>
+      <div class="share">
+        <label>事件链接
+          <input id="share-link" type="text" readonly />
+        </label>
+        <button id="copy-link">复制</button>
+      </div>
+    </header>
+
+    <section class="grid-container">
+      <article class="grid-panel">
+        <h2>我的可用时间</h2>
+        <div class="time-grid-wrapper" data-mode="personal">
+          <div class="time-axis" id="personal-axis"></div>
+          <div id="personal-grid" class="time-grid" data-mode="personal"></div>
+        </div>
+        <p class="hint">按住鼠标拖动可批量选取，再次点击可清除。</p>
+      </article>
+      <article class="grid-panel">
+        <h2>所有人的时间</h2>
+        <div class="time-grid-wrapper" data-mode="aggregate">
+          <div class="time-axis" id="aggregate-axis"></div>
+          <div id="aggregate-grid" class="time-grid" data-mode="aggregate"></div>
+        </div>
+        <p class="hint">颜色越深表示越多人有空。</p>
+      </article>
+    </section>
+  </main>
+
+  <script src="/socket.io/socket.io.js"></script>
+  <script defer src="/js/event.js"></script>
+</body>
+</html>
